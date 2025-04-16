@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "19.0.0",
     "react-native": "0.78.0",
-    "react-native-advanced-checkbox": "^2.0.5"
+    "react-native-advanced-checkbox": "^2.0.5",
+    "react-native-haptic-feedback": "^2.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

@@ -1,9 +1,14 @@
 import { Button, Keyboard, StyleSheet, Text, TextInput, View, TouchableWithoutFeedback } from 'react-native';
 import { AdvancedCheckbox } from 'react-native-advanced-checkbox';
 import React, { useState } from 'react';
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
 
 export default function PasswordGenerator() {
 
+  const options = {
+    enableVibrateFallback: true,
+    ignoreAndroidSystemSettings: false,
+  };
     const[count, setCount] = useState(0) 
     const [checkedLower, setCheckedLower] = useState(false);
     const [checkedUpper, setCheckedUpper] = useState(false);
@@ -107,6 +112,7 @@ console.log(genetare);
             setCount(0)
             setGenerate("")
             Keyboard.dismiss()
+            ReactNativeHapticFeedback.trigger("impactHeavy", options);
         }}/>
       </View>
       {(genetare === 'true' && genetare !== "") ? 
