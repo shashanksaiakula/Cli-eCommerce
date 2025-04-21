@@ -5,7 +5,7 @@ import SoundPlayer from "react-native-sound-player";
 const MusicApp = () => {
     
   const playSound = () => {
-    SoundPlayer.playSoundFile("beep", "mp3");
+    SoundPlayer.playSoundFile("Beep", "mp3");
     SoundPlayer.addEventListener('FinishedPlaying', () => {
       console.log('Finished playing sound');
     });
